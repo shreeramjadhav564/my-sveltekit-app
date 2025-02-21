@@ -1,12 +1,13 @@
+import { vitePreprocess } from '@sveltejs/kit';
+
 import adapter from '@sveltejs/adapter-node';
-import { vitePreprocess } from '@sveltejs/kit/vite';
 
 const config = {
-    kit: {
-        adapter: adapter(),
-        csrf: false, // To avoid CSRF issues in AWS
-    },
-    preprocess: vitePreprocess(),
+  kit: {
+    adapter: adapter()
+  },
+  preprocess: vitePreprocess()
 };
 
 export default config;
+
